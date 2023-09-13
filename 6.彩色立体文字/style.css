@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "round";
+    src: url("./VarelaRound-Regular.ttf");
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.main {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to left bottom, #434343 30%, black 100%);
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.text-contain {
+    transform: rotateX(-30deg) rotateZ(-10deg);
+    text-align: end;
+
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.main-text {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    font-size: 150px;
+    background-image: linear-gradient(to right, #f26363 0%, #9bcbbd 19%, #48c0de 42%, #ae8dea 79%, #4fc4e1 100%);
+    background-clip: text;
+    color: transparent;
+    position: relative;
+    font-family: "round";
+}
+.main-text::after,.main-text::before {
+    content: "Pure CSS";
+    font-size: 150px;
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc0be 19%, #94d6e6 42%, #b49fda 79%, #7ac5d8 100%);
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    white-space: nowrap;
+    z-index: -1;
+    top: 3px;
+    left: -3px;
+}
+.main-text_shadow{
+    text-shadow: -15px 0px 3px #000000ab;
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+    font-size: 150px;
+    white-space: nowrap;
+    font-family: "round";
+    z-index: -10;
+}
+.main-text::before{
+    top: 6px;
+    left: -6px;
+}
+.foot-text {
+    font-size: 30px;
+}
+.foot-text span{
+    font-family:"round";
+    font-weight: 800;
+}

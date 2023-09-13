@@ -1,0 +1,127 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    background-image: linear-gradient(to bottom, #d299c2 0%, #cbc49c 100%);
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+/* 云 */
+.cloud-content{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    transform: translateX(-10000px);
+}
+.cloud{ 
+    --color-c1:#eeeeeea0;
+    --color-c2:#eae9e4a0;
+    --color-c3:#d5d4d0a0;
+    width: 600px;
+    height: 280px;
+    background: #000;
+    border-radius: 50%;
+    filter: url(#filter-back);
+    box-shadow: 10000px 0px 50px 0px var(--color-c1);
+    position: absolute;
+    z-index: 100;
+}
+.cloud::after{
+    content: '';
+    position: absolute;
+    top:40%;
+    height: 50%;
+    width: 90%;
+    filter: url(#filter-mid);
+    box-shadow: 10000px 0px 50px 0px var(--color-c2);
+    z-index: 120;
+}
+.cloud::before{
+    content: '';
+    position: absolute;
+    top:65%;
+    height: 30%;
+    width: 90%;
+    filter: url(#filter-front);
+    box-shadow: 10000px 0px 50px 0px var(--color-c3);
+    z-index: 130;
+}
+.cloud-1{
+    width: 150px;
+    height: 110px;
+    top: 70px;
+    left: 130px;
+}
+.cloud-2{
+    width: 320px;
+    height: 100px;
+    top: 90px;
+    left: 700px;
+}
+.cloud-3{
+    width: 0px;
+    height: 16px;
+    top: 180px;
+    left: 700px;
+}
+
+/* 城市剪影 */
+
+.house-content{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+.house{
+    position: absolute;
+    bottom:-3px;
+    border-radius: 3px;
+}
+.house-1{
+    background-image: linear-gradient(135deg, #7586d2 0%, #9963cb 90%);
+    left:calc(var(--i)*80px + var(--j)*10px - 20px );
+    height: calc(var(--i)*6px + var(--j)*26px + 20px);
+    width: calc( var(--j)*26px + 20px);
+}
+.house-2{
+    background-image: linear-gradient(135deg, #aa76c8 10%, #c886b2 100%);
+    left:calc(var(--i)*60px + var(--j)*18px - 10px );
+    height: calc(var(--i)*7px + var(--j)*60px + 2px);
+    width: calc(var(--j)*-6px + 70px);
+}
+
+/* 灯光 */
+.light-content{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+.light{
+    position: absolute;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    left:calc(var(--i)*35px + var(--j)*20px + 10px );
+    bottom: calc(var(--i)*1px + var(--j)*40px - 30px);
+}
+
+/* 星星 */
+
+.light::before,.light::after{
+    position: absolute;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 2px;
+    background-color: #fff;
+    /* top:calc(-340px - var(--j)*40px + var(--i)*1px); */
+    top:-500px;
+    left:10px;
+}
+.light::after{
+    top:-320px;
+    left:0px;
+}

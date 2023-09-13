@@ -1,0 +1,21 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    display: grid;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+}
+.item{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(129, 149, 87);
+}
+.contain{
+    height: 100%;
+    width: 100%;
+}

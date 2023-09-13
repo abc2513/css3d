@@ -1,0 +1,90 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: 
+        radial-gradient(closest-side,rgb(137, 209, 239),transparent),
+        radial-gradient(closest-side,rgb(233, 241, 84),transparent),
+        radial-gradient(closest-side,rgb(255, 181, 90),transparent),
+        radial-gradient(closest-side,rgb(241, 110, 188),transparent),
+        radial-gradient(closest-side,rgb(243, 146, 204),transparent),
+        linear-gradient(rgba(243, 146, 204, 0.5),rgba(243, 146, 204, 0.5));
+    background-size: 
+        60vmax 80vmax,
+        60vmax 60vmax,
+        80vmax 60vmax,
+        80vmax 60vmax,
+        130vmax 130vmax,
+        1000vh 100vw;
+    background-position: 
+        60vmax 2vmax,
+        -20vmax 10vmax,
+        40vmax -10vmax,
+        20vmax 30vmax,
+        -40vmax -50vmax,
+        0 0;
+    background-repeat: no-repeat;
+    animation: 'movement' 6s linear 0s infinite;
+}
+.main::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ffffff12;
+    backdrop-filter: blur(10px);
+}
+@keyframes movement {
+    25%{
+        background-size: 
+            65vmax 85vmax,
+            50vmax 65vmax,
+            70vmax 50vmax,
+            60vmax 80vmax,
+            150vmax 110vmax,
+            1000vh 100vw;
+        background-position: 
+            70vmax 8vmax,
+            -15vmax 20vmax,
+            35vmax -10vmax,
+            20vmax 30vmax,
+            -35vmax -45vmax,
+            0 0;
+    }
+    75%{
+        background-size: 
+            60vmax 80vmax,
+            60vmax 60vmax,
+            80vmax 60vmax,
+            80vmax 60vmax,
+            130vmax 130vmax,
+            1000vh 100vw;
+        background-position: 
+            60vmax 2vmax,
+            -20vmax 30vmax,
+            35vmax 0vmax,
+            25vmax 25vmax,
+            -45vmax -45vmax,
+            0 0;
+    }
+}
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000;
+
+    text-align: center;
+    padding: 130px 200px;
+    background-color: #ffffff33;
+    border-radius: 9px;
+    color: #fff;
+    font-size: 30px;
+    box-shadow: 6px 6px 40px #cbcbcb3c;
+}
